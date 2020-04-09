@@ -1,0 +1,7 @@
+<div class="cart-item" *ngFor="let item of items">
+    <span class="badge">{{item.name}}  {{item.price | currency}}</span>
+    <button class="delete" title="delete hero" (click)="delete(item)">x</button>
+    <h2>
+      Overall: {{item.price}}
+    </h2>
+</div>

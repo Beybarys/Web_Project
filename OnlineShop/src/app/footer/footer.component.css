@@ -1,0 +1,25 @@
+.footer {
+  background-color: #690638;
+  border-top: 2px solid black;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+#text{
+  margin: 0px;
+  color: white;
+  text-align: center;
+}
+.footer2{
+  background-color: #690638;
+  padding: 20px 10px;
+}
+.footer2 h4{
+  text-align: center;
+  color: aliceblue;
+}
+.social{
+  padding-left: 665px;
+}
+#img{
+  padding-left: 5px;
+}

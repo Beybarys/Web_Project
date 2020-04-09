@@ -1,0 +1,29 @@
+.input{
+    padding-top: 20px;
+    margin-left: 650px;
+    padding-bottom: 380px;
+}
+#username{
+    border-radius: 3px;
+    padding: 3px 5px;
+    font-size: 14px;
+}
+#password{
+    border-radius: 3px;
+    padding: 3px 5px;
+    font-size: 14px;
+}
+#submit{
+    border-radius: 3px;
+    padding: 3px 5px;
+    font-size: 14px;
+}
+#submit:hover{
+    border-color: royalblue;
+    background-color: royalblue;
+    color: whitesmoke;
+    transition: 0.3s ease-in;
+}
+.login{
+    padding-bottom: 8px;
+}
