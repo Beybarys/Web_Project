@@ -33,7 +33,7 @@ export class CartService {
     return this.http.get('/assets/shipping.json');
   }
 
-  deleteHero (item: CartComponent | number): Observable<CartComponent> {
+  deleteItem (item: CartComponent | number): Observable<CartComponent> {
     const id = typeof item === 'number' ? item : item;
     const url = `${this.itemsUrl}/${id}`;
 

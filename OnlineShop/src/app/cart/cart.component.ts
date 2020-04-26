@@ -19,6 +19,6 @@ export class CartComponent implements OnInit {
   }
   delete(item: CartComponent) :void{
     this.items = this.items.filter( (item: any) => item !==this.items);
-    this.cartService.deleteHero(item).subscribe();
+    this.cartService.deleteItem(item).subscribe();
   }
 }
