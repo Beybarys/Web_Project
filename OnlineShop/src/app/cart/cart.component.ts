@@ -17,8 +17,4 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.items = this.cartService.getItems();
   }
-  delete(item: CartComponent) :void{
-    this.items = this.items.filter( (item: any) => item !==this.items);
-    this.cartService.deleteItem(item).subscribe();
-  }
-}
+ }

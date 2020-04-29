@@ -1,4 +1,8 @@
 <div class="products_container">
+  <div class="button">
+    <button (click)="sortByPriceAsc()">Сортировать по возрастанию</button>
+    <button (click)="sortByPriceDesc()">Сортировать по убыванию</button>
+  </div>
   <div class="products">
     <div *ngFor="let product of products, index as productId" class="product_item">
       <img src="{{product.image}}" alt="" [routerLink]="['/products/' + product.id]">

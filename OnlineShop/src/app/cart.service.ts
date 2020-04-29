@@ -9,7 +9,7 @@ import { catchError, map, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CartService {
-  private itemsUrl = 'api/iteams';
+  private itemsUrl = 'api/items';
   items = [];
 
   httpOptions = {
@@ -31,18 +31,6 @@ export class CartService {
 
   getShippingPrices() {
     return this.http.get('/assets/shipping.json');
-  }
-
-  deleteItem (item: CartComponent | number): Observable<CartComponent> {
-    const id = typeof item === 'number' ? item : item;
-    const url = `${this.itemsUrl}/${id}`;
-
-    return this.http.delete<CartComponent>(url, this.httpOptions).pipe(
-      catchError(this.handleError<CartComponent>('delete'))
-    );
-  }
-  handleError<T>(arg0: string): (err: any, caught: Observable<any>) => import("rxjs").ObservableInput<any> {
-    throw new Error("Method not implemented.");
   }
 
 

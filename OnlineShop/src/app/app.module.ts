@@ -8,7 +8,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CategoriesComponent } from './categories/categories.component';
 import {ProductItemComponent} from './product-item/product-item.component';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -16,6 +16,8 @@ import { TestComponent } from './test/test.component';
 import {MatButtonModule} from '@angular/material/button';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import {AuthInterceptor} from './auth.interceptor';
+import {SortByPipe} from './product-list.service';
 
 @NgModule({
   imports: [
@@ -33,6 +35,13 @@ import { LoginComponent } from './login/login.component';
     BrowserAnimationsModule,
     MatButtonModule,
     FormsModule,
+  ],
+  providers:[
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
   ],
   declarations: [
     AppComponent,
